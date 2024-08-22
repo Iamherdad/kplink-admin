@@ -42,12 +42,12 @@ const LayoutCom: React.FC = () => {
   const labels = [
     {
       label: "插件管理",
-      key: "extension",
+      key: "app",
       icon: React.createElement(UserOutlined),
       onClick: handleItemClick,
     },
     {
-      label: "核心管理",
+      label: "内核管理",
       key: "core",
       icon: React.createElement(VideoCameraOutlined),
       onClick: handleItemClick,
@@ -94,9 +94,9 @@ const LayoutCom: React.FC = () => {
             <Outlet />
           </div>
         </Content>
-        <Footer style={{ textAlign: "center" }}>
+        {/* <Footer style={{ textAlign: "center" }}>
           Ant Design ©{new Date().getFullYear()} Created by Ant UED
-        </Footer>
+        </Footer> */}
       </Layout>
     </Layout>
   );

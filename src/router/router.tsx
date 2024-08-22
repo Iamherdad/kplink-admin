@@ -1,8 +1,9 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "../container/layout/layout";
-import Extension from "../components/extension/extension";
-import Core from "../components/core/core";
-
+import App from "../pages/app/appList";
+import Core from "../pages/core/coreList";
+import { getAppList } from "@/service/api/app.ts";
+import { getCoreList } from "@/service/api/core.ts";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -13,24 +14,18 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Extension />,
-        loader: async () => {
-          return ["extension"];
-        },
+        element: <App />,
+        loader: getAppList,
       },
       {
-        path: "extension",
-        element: <Extension />,
-        loader: async () => {
-          return ["extension"];
-        },
+        path: "app",
+        element: <App />,
+        loader: getAppList,
       },
       {
         path: "core",
         element: <Core />,
-        loader: async () => {
-          return ["core"];
-        },
+        loader: getCoreList,
       },
     ],
   },

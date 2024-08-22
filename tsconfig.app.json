@@ -18,7 +18,11 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": "./", // Add the 'baseUrl' property and set it to './'
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
   "include": ["src"]
 }

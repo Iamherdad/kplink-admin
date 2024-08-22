@@ -1,0 +1,47 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  height: 10%;
+  border: 1px solid green;
+  box-sizing: border-box;
+}
+
+.content {
+  height: 80%;
+}
+
+.app {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.appContainer {
+  flex: 1 1 calc(33.33% - 20px);
+  min-width: 375px;
+  height: 154px;
+  margin: 10px;
+  border-radius: 5px;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid #f2f2f2;
+  box-sizing: border-box;
+}
+
+.appContainer:hover {
+  border-color: #275ce2;
+}
+
+.pagintain {
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid blue;
+  box-sizing: border-box;
+}
