@@ -2,11 +2,12 @@ import React from "react";
 import { Pagination } from "antd";
 import { useLoaderData } from "react-router-dom";
 import APP from "@/components/app/app";
+import { IAppProps } from "@/types/app";
+
 import styles from "./app.module.css";
 
 const Com: React.FC = () => {
-  const data = useLoaderData() as [];
-
+  const data = useLoaderData() as [IAppProps];
   return (
     <div className={styles.container}>
       <div className={styles.header}>add</div>

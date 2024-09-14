@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "../container/layout/layout";
 import App from "../pages/app/appList";
 import Core from "../pages/core/coreList";
+import Store from "@/pages/store/store";
 import { getAppList } from "@/service/api/app.ts";
 import { getCoreList } from "@/service/api/core.ts";
 const router = createBrowserRouter([
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
         path: "core",
         element: <Core />,
         loader: getCoreList,
+      },
+      {
+        path: "store",
+        element: <Store />,
       },
     ],
   },

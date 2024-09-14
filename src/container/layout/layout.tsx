@@ -52,6 +52,12 @@ const LayoutCom: React.FC = () => {
       icon: React.createElement(VideoCameraOutlined),
       onClick: handleItemClick,
     },
+    {
+      label: "仓库管理",
+      key: "store",
+      icon: React.createElement(UploadOutlined),
+      onClick: handleItemClick,
+    },
   ];
 
   const items: MenuProps["items"] = labels.map((item, index) => ({
@@ -75,9 +81,9 @@ const LayoutCom: React.FC = () => {
       <Layout style={{ marginInlineStart: 200 }}>
         <Content
           style={{
-            margin: "24px 16px 0",
+            // margin: "24px 16px 0",
             overflow: "initial",
-            width: "100%",
+
             height: "100%",
           }}
         >
