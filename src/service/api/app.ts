@@ -4,4 +4,12 @@ const getAppList = async () => {
   return request.get("/app");
 };
 
-export { getAppList };
+const uploadAppFile = async (data: any) => {
+  return request.post("/file/app", data, {
+    headers: {
+      "Content-Type": "multipart/form-data",
+    },
+  });
+};
+
+export { getAppList, uploadAppFile };
